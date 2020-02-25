@@ -63,7 +63,7 @@ AddEventHandler('playerConnecting', function()
 
     local _id = GetDiscordID(source)
 
-    if _id == nil then
+    if _id == nil or _id == false then
         InsertToIdentifiers(player, steam, discord) 
         print("[DiscordDB] Collected Identifiers for " ..player.." successfully!")
     end
